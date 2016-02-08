@@ -21,6 +21,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RaP-du-8a5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableFooterView" contentMode="redraw" id="I9P-CL-vMy">
+                                    <rect key="frame" x="0.0" y="188" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="96" id="Dax-8s-dTs" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="320" height="96"/>
@@ -84,7 +89,6 @@
                                                 <constraint firstItem="t2O-Xd-8ki" firstAttribute="top" secondItem="Qeu-gN-msY" secondAttribute="bottom" constant="8" id="0Ra-R8-wBD"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZLz-mp-Ssr" secondAttribute="trailing" constant="8" id="1gx-K5-NOK"/>
                                                 <constraint firstItem="kft-1X-APF" firstAttribute="top" secondItem="Qeu-gN-msY" secondAttribute="bottom" constant="7" id="5m3-H1-A0W"/>
-                                                <constraint firstItem="wLU-CF-Kne" firstAttribute="top" secondItem="iju-Ub-2XV" secondAttribute="topMargin" constant="28" id="6HV-NP-VuY"/>
                                                 <constraint firstItem="Qeu-gN-msY" firstAttribute="top" secondItem="iju-Ub-2XV" secondAttribute="top" constant="8" id="7UB-cH-MHc"/>
                                                 <constraint firstItem="ZLz-mp-Ssr" firstAttribute="leading" secondItem="Qeu-gN-msY" secondAttribute="trailing" constant="5" id="EyA-eR-xCO"/>
                                                 <constraint firstItem="QOs-kk-h7Y" firstAttribute="leading" secondItem="jYf-VH-hPI" secondAttribute="trailing" constant="13" id="LHK-Mw-kcC"/>
@@ -93,15 +97,15 @@
                                                 <constraint firstItem="jYf-VH-hPI" firstAttribute="top" secondItem="iju-Ub-2XV" secondAttribute="top" constant="8" id="Ui1-vG-aSy"/>
                                                 <constraint firstItem="kft-1X-APF" firstAttribute="leading" secondItem="t2O-Xd-8ki" secondAttribute="trailing" constant="8" id="WHE-ED-evv"/>
                                                 <constraint firstItem="t2O-Xd-8ki" firstAttribute="leading" secondItem="jYf-VH-hPI" secondAttribute="trailing" constant="13" id="Zch-4l-JLM"/>
-                                                <constraint firstItem="wLU-CF-Kne" firstAttribute="trailing" secondItem="iju-Ub-2XV" secondAttribute="trailingMargin" id="aVE-GV-TyH"/>
                                                 <constraint firstItem="ZLz-mp-Ssr" firstAttribute="top" secondItem="iju-Ub-2XV" secondAttribute="topMargin" constant="4" id="bKL-IP-ckn"/>
                                                 <constraint firstItem="jYf-VH-hPI" firstAttribute="leading" secondItem="iju-Ub-2XV" secondAttribute="leading" constant="8" id="cFd-pi-hgA"/>
+                                                <constraint firstItem="wLU-CF-Kne" firstAttribute="top" secondItem="ZLz-mp-Ssr" secondAttribute="bottom" constant="7" id="gHX-8W-CHO"/>
                                                 <constraint firstAttribute="trailing" secondItem="GNh-ZR-TCs" secondAttribute="trailing" constant="8" id="iSH-CR-Amf"/>
                                                 <constraint firstItem="GNh-ZR-TCs" firstAttribute="leading" secondItem="iju-Ub-2XV" secondAttribute="leading" constant="86" id="nTs-k4-RNj"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GNh-ZR-TCs" secondAttribute="bottom" constant="4" id="pXk-0r-eMi"/>
+                                                <constraint firstItem="wLU-CF-Kne" firstAttribute="trailing" secondItem="iju-Ub-2XV" secondAttribute="trailingMargin" id="q8s-h8-BXX"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="QOs-kk-h7Y" secondAttribute="trailing" constant="8" id="s6x-Bw-dKn"/>
                                                 <constraint firstItem="GNh-ZR-TCs" firstAttribute="top" secondItem="QOs-kk-h7Y" secondAttribute="bottom" constant="1" id="tQK-1P-cGD"/>
-                                                <constraint firstItem="wLU-CF-Kne" firstAttribute="leading" secondItem="kft-1X-APF" secondAttribute="trailing" constant="34" id="zfQ-Gm-cYt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -133,6 +137,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="I9P-CL-vMy" id="tCh-mk-JdC"/>
                         <outlet property="tableView" destination="RaP-du-8a5" id="bxf-Jv-zgp"/>
                     </connections>
                 </viewController>
